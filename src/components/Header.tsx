@@ -17,7 +17,7 @@ export function Header() {
             Valley
           </Link>
           <Link href="/featured" className="hover:text-brand-700">
-            Featured
+            For Businesses
           </Link>
           <Link
             href="/submit"
