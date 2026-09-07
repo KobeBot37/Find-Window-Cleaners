@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
+import { getListingBySlug } from "@/lib/listings";
 
 export const runtime = "nodejs";
 
@@ -19,7 +20,7 @@ export async function POST(req: Request) {
     );
   }
 
-  let body: { plan?: string; listingSlug?: string };
+  let body: { plan?: string; listingSlug?: string; businessName?: string };
   try {
     body = await req.json();
   } catch {
@@ -30,6 +31,25 @@ export async function POST(req: Request) {
   if (!plan) {
     return NextResponse.json({ error: "Invalid plan" }, { status: 400 });
   }
+
+  const listingSlug = (body.listingSlug || "").trim();
+  if (!listingSlug) {
+    return NextResponse.json(
+      { error: "Select a business listing before checkout." },
+      { status: 400 }
+    );
+  }
+
+  const listing = getListingBySlug(listingSlug);
+  if (!listing) {
+    return NextResponse.json(
+      { error: "Listing not found. Pick a valid business from the directory." },
+      { status: 400 }
+    );
+  }
+
+  const businessName =
+    (body.businessName || "").trim() || listing.business_name;
 
   const priceId =
     plan === "39"
@@ -48,16 +68,31 @@ export async function POST(req: Request) {
   });
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const listingQs = encodeURIComponent(listing.slug);
 
   try {
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",
       line_items: [{ price: priceId, quantity: 1 }],
-      success_url: `${siteUrl}/featured?success=1`,
-      cancel_url: `${siteUrl}/featured?canceled=1`,
+      success_url: `${siteUrl}/featured?success=1&listing=${listingQs}`,
+      cancel_url: `${siteUrl}/featured?canceled=1&listing=${listingQs}`,
+      client_reference_id: listing.slug,
       metadata: {
-        listingSlug: body.listingSlug || "",
+        listingSlug: listing.slug,
+        businessName,
         plan,
+      },
+      subscription_data: {
+        metadata: {
+          listingSlug: listing.slug,
+          businessName,
+          plan,
+        },
+      },
+      custom_text: {
+        submit: {
+          message: `Featuring ${businessName} on Find Window Cleaners`,
+        },
       },
     });
 

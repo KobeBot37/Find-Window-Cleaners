@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { CheckoutButtons } from "./CheckoutButtons";
-import { getListingBySlug, isFeatured, loadListings } from "@/lib/listings";
+import { FeaturedCheckout } from "./FeaturedCheckout";
+import { isFeatured, loadListings } from "@/lib/listings";
 import { ListingCard } from "@/components/ListingCard";
 
 export const metadata: Metadata = {
@@ -12,11 +11,21 @@ export const metadata: Metadata = {
 export default async function FeaturedPage({
   searchParams,
 }: {
-  searchParams: Promise<{ listing?: string }>;
+  searchParams: Promise<{ listing?: string; success?: string; canceled?: string }>;
 }) {
   const sp = await searchParams;
-  const listing = sp.listing ? getListingBySlug(sp.listing) : undefined;
-  const featured = loadListings().filter((l) => isFeatured(l.slug)).slice(0, 6);
+  const listings = loadListings();
+  const options = listings.map((l) => ({
+    slug: l.slug,
+    business_name: l.business_name,
+    city: l.city,
+  }));
+  const featured = listings.filter((l) => isFeatured(l.slug)).slice(0, 6);
+  const success = sp.success === "1";
+  const canceled = sp.canceled === "1";
+  const selectedListing = sp.listing
+    ? listings.find((l) => l.slug === sp.listing)
+    : undefined;
 
   return (
     <div className="space-y-10">
@@ -24,16 +33,26 @@ export default async function FeaturedPage({
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">Get Featured</h1>
         <p className="text-slate-600">
           Stand out on city pages and search results with a Featured badge and priority sorting.
-          {listing ? (
-            <>
-              {" "}Upgrading <strong>{listing.business_name}</strong>.
-            </>
-          ) : null}
         </p>
-        <CheckoutButtons listingSlug={listing?.slug} />
-        <p className="text-xs text-slate-500">
-          Not listed yet? <Link href="/submit" className="text-brand-700 hover:underline">Submit your business</Link> first.
-        </p>
+
+        {success ? (
+          <div className="rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">
+            <p className="font-semibold">Payment received — thank you!</p>
+            <p className="mt-1">
+              {selectedListing
+                ? `We’ll feature ${selectedListing.business_name} shortly. Featured badges usually appear within one business day.`
+                : "We’ll apply your Featured upgrade shortly. Featured badges usually appear within one business day."}
+            </p>
+          </div>
+        ) : null}
+
+        {canceled ? (
+          <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+            Checkout was canceled. Select your business below when you’re ready to try again.
+          </div>
+        ) : null}
+
+        <FeaturedCheckout options={options} initialSlug={sp.listing} />
       </section>
 
       {featured.length > 0 ? (

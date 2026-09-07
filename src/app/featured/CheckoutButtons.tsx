@@ -2,7 +2,13 @@
 
 import { useState } from "react";
 
-export function CheckoutButtons({ listingSlug }: { listingSlug?: string }) {
+export function CheckoutButtons({
+  listingSlug,
+  businessName,
+}: {
+  listingSlug?: string;
+  businessName?: string;
+}) {
   const [error, setError] = useState<string | null>(null);
   const [pending, setPending] = useState<string | null>(null);
   const publishable = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || "";
@@ -10,15 +16,24 @@ export function CheckoutButtons({ listingSlug }: { listingSlug?: string }) {
     publishable.length > 0 &&
     !publishable.includes("placeholder") &&
     publishable.startsWith("pk_");
+  const ready = Boolean(listingSlug);
 
   async function startCheckout(plan: "29" | "39") {
+    if (!listingSlug) {
+      setError("Select a business before checkout.");
+      return;
+    }
     setError(null);
     setPending(plan);
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ plan, listingSlug }),
+        body: JSON.stringify({
+          plan,
+          listingSlug,
+          businessName: businessName || undefined,
+        }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Checkout unavailable");
@@ -52,26 +67,26 @@ export function CheckoutButtons({ listingSlug }: { listingSlug?: string }) {
       <div className="grid gap-3 sm:grid-cols-2">
         <button
           type="button"
-          disabled={!!pending}
+          disabled={!ready || !!pending}
           onClick={() => startCheckout("29")}
-          className="rounded-xl border border-slate-200 bg-white px-4 py-4 text-left hover:border-brand-300 disabled:opacity-60"
+          className="rounded-xl border border-slate-200 bg-white px-4 py-4 text-left hover:border-brand-300 disabled:cursor-not-allowed disabled:opacity-60"
         >
           <p className="text-lg font-bold text-slate-900">$29/mo</p>
           <p className="text-sm text-slate-600">Featured badge + city priority</p>
           <p className="mt-2 text-xs font-semibold text-brand-700">
-            {pending === "29" ? "Redirecting…" : "Checkout →"}
+            {pending === "29" ? "Redirecting…" : ready ? "Checkout →" : "Select a business first"}
           </p>
         </button>
         <button
           type="button"
-          disabled={!!pending}
+          disabled={!ready || !!pending}
           onClick={() => startCheckout("39")}
-          className="rounded-xl border border-brand-300 bg-brand-50 px-4 py-4 text-left hover:border-brand-500 disabled:opacity-60"
+          className="rounded-xl border border-brand-300 bg-brand-50 px-4 py-4 text-left hover:border-brand-500 disabled:cursor-not-allowed disabled:opacity-60"
         >
           <p className="text-lg font-bold text-slate-900">$39/mo</p>
           <p className="text-sm text-slate-600">Homepage spotlight + badge</p>
           <p className="mt-2 text-xs font-semibold text-brand-700">
-            {pending === "39" ? "Redirecting…" : "Checkout →"}
+            {pending === "39" ? "Redirecting…" : ready ? "Checkout →" : "Select a business first"}
           </p>
         </button>
       </div>
