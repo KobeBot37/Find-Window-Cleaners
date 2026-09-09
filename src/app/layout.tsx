@@ -4,6 +4,8 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SITE_NAME } from "@/lib/cities";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,6 +32,8 @@ export default function RootLayout({
         <Header />
         <main className="mx-auto min-h-[70vh] max-w-6xl px-4 py-8">{children}</main>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
