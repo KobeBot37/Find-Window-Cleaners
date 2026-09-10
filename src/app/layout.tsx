@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Find trusted residential and commercial window cleaners across Phoenix, Scottsdale, Mesa, and the Valley.",
   verification: {
-    google: "RQ2ALrGxOswUEKAXxVjKuBjnHULvShhTh3LqOEllys",
+    google: "RQ2ALrGxOswUIEKAXxVjKuBjnHULvShhTh3LqOEIlys",
   },
 };
 
