@@ -42,6 +42,17 @@ export function Footer() {
               </Link>
             </li>
           </ul>
+          <p className="mt-4 text-sm font-semibold text-slate-800">Guides</p>
+          <ul className="mt-2 space-y-1 text-sm text-slate-600">
+            <li>
+              <Link
+                href="/guides/phoenix-window-cleaning-cost"
+                className="hover:text-brand-700"
+              >
+                Phoenix window cleaning cost
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
       <div className="border-t border-slate-200 py-4 text-center text-xs text-slate-500">

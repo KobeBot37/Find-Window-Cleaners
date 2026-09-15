@@ -21,6 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    {
+      url: `${BASE}/guides/phoenix-window-cleaning-cost`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 
   const cityPages: MetadataRoute.Sitemap = [VALLEY_HUB, ...WEEK1_CITIES].map(
