@@ -14,11 +14,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_NAME} | Phoenix Valley, AZ`,
+    default: `${SITE_NAME} | Phoenix Valley Window Cleaners`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Find trusted residential and commercial window cleaners across Phoenix, Scottsdale, Mesa, and the Valley.",
+    "Find Phoenix Valley window cleaners — trusted residential and commercial companies across Phoenix, Scottsdale, Mesa, and the Valley.",
   verification: {
     google: "RQ2ALrGxOswUIEKAXxVjKuBjnHULvShhTh3LqOEIlys",
   },

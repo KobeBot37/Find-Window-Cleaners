@@ -5,7 +5,6 @@ import { FilterBar } from "@/components/FilterBar";
 import {
   allAzStaticParams,
   cityFromRouteSlug,
-  SITE_NAME,
 } from "@/lib/cities";
 import {
   filterByService,
@@ -26,9 +25,14 @@ export async function generateMetadata({
   const { slug } = await params;
   const city = cityFromRouteSlug(slug);
   if (!city) return { title: "Not found" };
+  const isValleyHub = city.slug === "phoenix-valley";
   return {
-    title: city.h1,
-    description: `Find trusted window cleaners in ${city.name}, AZ. Compare ratings, services, and contact info on ${SITE_NAME}.`,
+    title: isValleyHub
+      ? "Phoenix Valley Window Cleaners"
+      : `Window Cleaners in ${city.name}, AZ`,
+    description: isValleyHub
+      ? "Find local residential & commercial window cleaning companies across the Phoenix Valley, Arizona. Compare listings, ratings, and contact info."
+      : `Find local residential & commercial window cleaning companies in ${city.name}, Arizona. Compare listings, ratings, and contact info.`,
   };
 }
 
