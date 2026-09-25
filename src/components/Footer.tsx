@@ -52,6 +52,30 @@ export function Footer() {
                 Phoenix window cleaning cost
               </Link>
             </li>
+            <li>
+              <Link
+                href="/guides/how-often-clean-windows-phoenix"
+                className="hover:text-brand-700"
+              >
+                How often to clean windows (Phoenix)
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/guides/choose-window-cleaner-gilbert-az"
+                className="hover:text-brand-700"
+              >
+                Choose a cleaner in Gilbert
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/guides/condo-vs-house-window-cleaning-phoenix"
+                className="hover:text-brand-700"
+              >
+                Condo vs house cost (Phoenix)
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

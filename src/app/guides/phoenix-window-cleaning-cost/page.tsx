@@ -151,6 +151,36 @@ export default function PhoenixWindowCleaningCostGuide() {
         </div>
       </section>
 
+      <section className="space-y-4 text-base leading-relaxed text-slate-700 sm:text-[1.05rem] sm:leading-7">
+        <h2 className="text-xl font-semibold text-slate-900">Related guides</h2>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>
+            <Link
+              href="/guides/how-often-clean-windows-phoenix"
+              className="font-medium text-brand-700 hover:underline"
+            >
+              How often should you clean windows in Phoenix?
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/guides/condo-vs-house-window-cleaning-phoenix"
+              className="font-medium text-brand-700 hover:underline"
+            >
+              Condo vs house window cleaning cost in Phoenix
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/guides/choose-window-cleaner-gilbert-az"
+              className="font-medium text-brand-700 hover:underline"
+            >
+              How to choose a window cleaner in Gilbert, AZ
+            </Link>
+          </li>
+        </ul>
+      </section>
+
       <p className="border-t border-slate-200 pt-6 text-sm text-slate-500">
         Independent guide from Find Window Cleaners. We don’t set prices for listed
         businesses — always confirm cost and scope directly with the company you hire.

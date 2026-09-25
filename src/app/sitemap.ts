@@ -27,6 +27,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${BASE}/guides/how-often-clean-windows-phoenix`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE}/guides/choose-window-cleaner-gilbert-az`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE}/guides/condo-vs-house-window-cleaning-phoenix`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 
   const cityPages: MetadataRoute.Sitemap = [VALLEY_HUB, ...WEEK1_CITIES].map(
