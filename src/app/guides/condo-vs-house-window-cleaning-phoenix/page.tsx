@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { absoluteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: {
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   },
   description:
     "Why Phoenix condo and house window-cleaning quotes differ — access, HOA rules, stories, pane count — with ballpark ranges consistent with our cost guide.",
+  alternates: { canonical: absoluteUrl("/guides/condo-vs-house-window-cleaning-phoenix") },
 };
 
 export default function CondoVsHouseWindowCleaningPhoenixGuide() {

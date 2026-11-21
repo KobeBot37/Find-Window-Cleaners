@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FeaturedBadge } from "@/components/FeaturedBadge";
+import { JsonLd } from "@/components/JsonLd";
 import { WEEK1_CITIES } from "@/lib/cities";
 import {
   getListingBySlug,
   isFeatured,
   loadListings,
 } from "@/lib/listings";
+import { absoluteUrl, isThinListing, nearbyListings } from "@/lib/seo";
 
 export function generateStaticParams() {
   return loadListings().map((l) => ({ slug: l.slug }));
@@ -24,6 +26,8 @@ export async function generateMetadata({
   return {
     title: listing.business_name,
     description: `${listing.business_name} — window cleaning in ${listing.city}, AZ. Phone, services, and reviews.`,
+    alternates: { canonical: absoluteUrl(`/listing/${listing.slug}`) },
+    ...(isThinListing(listing) ? { robots: { index: false, follow: true } } : {}),
   };
 }
 
@@ -37,9 +41,29 @@ export default async function ListingPage({
   if (!listing) notFound();
   const featured = isFeatured(listing.slug);
   const cityLinks = WEEK1_CITIES.filter((c) => listing.citySlugs.includes(c.slug));
+  const nearby = nearbyListings(listing, 6);
+
+  const streetAddress = listing.address.trim();
+  const businessLd: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${absoluteUrl(`/listing/${listing.slug}`)}#business`,
+    name: listing.business_name,
+    address: {
+      "@type": "PostalAddress",
+      ...(streetAddress ? { streetAddress } : {}),
+      ...(listing.city ? { addressLocality: listing.city } : {}),
+      addressRegion: listing.state || "AZ",
+      ...(listing.zip ? { postalCode: listing.zip } : {}),
+      addressCountry: "US",
+    },
+    ...(listing.phone ? { telephone: listing.phone } : {}),
+    ...(listing.website ? { url: listing.website } : {}),
+  };
 
   return (
     <div className="mx-auto max-w-3xl space-y-8">
+      <JsonLd data={businessLd} />
       <div>
         <div className="flex flex-wrap items-center gap-2">
           {featured ? <FeaturedBadge /> : null}
@@ -143,6 +167,40 @@ export default async function ListingPage({
           </div>
         </section>
       ) : null}
+
+      {nearby.length > 0 ? (
+        <section>
+          <h2 className="text-lg font-semibold text-slate-900">
+            Nearby window cleaners in {listing.city || "the Phoenix Valley"}
+          </h2>
+          <ul className="mt-2 grid gap-2 sm:grid-cols-2">
+            {nearby.map((n) => (
+              <li key={n.slug}>
+                <Link
+                  href={`/listing/${n.slug}`}
+                  className="block rounded-lg border border-slate-200 px-3 py-2 text-sm font-medium text-brand-800 hover:bg-brand-50"
+                >
+                  {n.business_name}
+                  {n.city && n.city !== listing.city ? (
+                    <span className="text-slate-500"> · {n.city}</span>
+                  ) : null}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
+      <section className="text-sm text-slate-700">
+        Wondering what to budget?{" "}
+        <Link
+          href="/guides/phoenix-window-cleaning-cost"
+          className="font-medium text-brand-700 hover:underline"
+        >
+          See our Phoenix window cleaning cost guide
+        </Link>
+        .
+      </section>
 
       {(listing.email || listing.facebook || listing.instagram || listing.years_in_business) && (
         <section className="rounded-2xl border border-slate-200 p-5 text-sm text-slate-700">

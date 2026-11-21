@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { FeaturedCheckout } from "./FeaturedCheckout";
 import { isFeatured, loadListings } from "@/lib/listings";
 import { ListingCard } from "@/components/ListingCard";
+import { absoluteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Get Featured",
   description: "Upgrade your Find Window Cleaners listing with a Featured badge for $29–39/mo.",
+  alternates: { canonical: absoluteUrl("/featured") },
 };
 
 export default async function FeaturedPage({

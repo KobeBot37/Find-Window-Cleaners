@@ -1,7 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Submission received" };
+export const metadata: Metadata = {
+  title: "Submission received",
+  alternates: { canonical: absoluteUrl("/submit/success") },
+  robots: { index: false, follow: true },
+};
 
 export default function SubmitSuccessPage() {
   return (

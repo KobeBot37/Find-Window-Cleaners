@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { absoluteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: {
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   },
   description:
     "Ballpark residential window cleaning prices in Phoenix, AZ — what affects cost (stories, hard water, screens), and when to get multiple quotes.",
+  alternates: { canonical: absoluteUrl("/guides/phoenix-window-cleaning-cost") },
 };
 
 export default function PhoenixWindowCleaningCostGuide() {
