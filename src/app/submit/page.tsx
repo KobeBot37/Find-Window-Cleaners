@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { SubmitForm } from "./SubmitForm";
+import { absoluteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Submit a listing",
   description: "Add your Phoenix Valley window cleaning business to Find Window Cleaners.",
+  alternates: { canonical: absoluteUrl("/submit") },
 };
 
 export default function SubmitPage() {

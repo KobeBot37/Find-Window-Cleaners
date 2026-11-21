@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { absoluteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: {
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   },
   description:
     "Dust, pollen, monsoon, and hard water — a practical Phoenix window-cleaning cadence (about every 2–4 months) and when to book sooner.",
+  alternates: { canonical: absoluteUrl("/guides/how-often-clean-windows-phoenix") },
 };
 
 export default function HowOftenCleanWindowsPhoenixGuide() {

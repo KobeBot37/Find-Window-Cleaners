@@ -13,6 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://findwindowcleaners.com"),
   title: {
     default: `${SITE_NAME} | Phoenix Valley Window Cleaners`,
     template: `%s | ${SITE_NAME}`,

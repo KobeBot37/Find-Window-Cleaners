@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { absoluteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: {
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   },
   description:
     "A practical Gilbert, AZ checklist: insurance, reviews, hard-water experience, screens, and clear quotes — then browse local listings.",
+  alternates: { canonical: absoluteUrl("/guides/choose-window-cleaner-gilbert-az") },
 };
 
 export default function ChooseWindowCleanerGilbertGuide() {

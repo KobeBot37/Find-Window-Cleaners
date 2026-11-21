@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { SearchBar } from "@/components/SearchBar";
 import { ListingCard } from "@/components/ListingCard";
 import { WEEK1_CITIES, VALLEY_HUB, SITE_NAME } from "@/lib/cities";
 import { isFeatured, searchListings, sortListings, loadListings } from "@/lib/listings";
+import { SITE_URL } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  alternates: { canonical: SITE_URL },
+};
 
 export default async function HomePage({
   searchParams,
