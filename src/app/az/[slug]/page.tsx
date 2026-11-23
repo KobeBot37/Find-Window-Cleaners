@@ -15,6 +15,7 @@ import {
   sortListings,
 } from "@/lib/listings";
 import { absoluteUrl, nearbyCities } from "@/lib/seo";
+import { getReviewSummary, isTopRated } from "@/lib/topRated";
 
 export function generateStaticParams() {
   return allAzStaticParams();
@@ -95,7 +96,13 @@ export default async function CityPage({
       ) : (
         <div className="grid gap-4 sm:grid-cols-2">
           {listings.map((l) => (
-            <ListingCard key={l.slug} listing={l} featured={isFeatured(l.slug)} />
+            <ListingCard
+              key={l.slug}
+              listing={l}
+              featured={isFeatured(l.slug)}
+              topRated={isTopRated(l)}
+              summary={getReviewSummary(l.slug)}
+            />
           ))}
         </div>
       )}

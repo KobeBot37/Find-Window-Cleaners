@@ -3,6 +3,7 @@ import path from "path";
 import { parseCsv } from "./csv";
 import { assignCitySlugs } from "./cities";
 import { slugify, uniqueSlug } from "./slugify";
+import { isTopRated } from "./topRated";
 import type { FilterSlug, Listing } from "./types";
 
 const DATA_DIR = path.join(process.cwd(), "data");
@@ -136,6 +137,10 @@ export function sortListings(listings: Listing[]): Listing[] {
     const af = featured.has(a.slug) ? 1 : 0;
     const bf = featured.has(b.slug) ? 1 : 0;
     if (af !== bf) return bf - af;
+    // Free "Top Rated" highlight comes right after paid Featured.
+    const at = isTopRated(a) ? 1 : 0;
+    const bt = isTopRated(b) ? 1 : 0;
+    if (at !== bt) return bt - at;
     const ar = a.rating ?? -1;
     const br = b.rating ?? -1;
     if (ar !== br) return br - ar;
