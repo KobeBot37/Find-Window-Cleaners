@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FeaturedBadge } from "@/components/FeaturedBadge";
+import { ReviewSummaryBox } from "@/components/ReviewSummaryBox";
+import { TopRatedBadge } from "@/components/TopRatedBadge";
+import { getReviewSummary, isTopRated } from "@/lib/topRated";
 import { JsonLd } from "@/components/JsonLd";
 import { WEEK1_CITIES } from "@/lib/cities";
 import {
@@ -40,6 +43,8 @@ export default async function ListingPage({
   const listing = getListingBySlug(slug);
   if (!listing) notFound();
   const featured = isFeatured(listing.slug);
+  const topRated = isTopRated(listing);
+  const summary = topRated ? getReviewSummary(listing.slug) : null;
   const cityLinks = WEEK1_CITIES.filter((c) => listing.citySlugs.includes(c.slug));
   const nearby = nearbyListings(listing, 6);
 
@@ -67,6 +72,7 @@ export default async function ListingPage({
       <div>
         <div className="flex flex-wrap items-center gap-2">
           {featured ? <FeaturedBadge /> : null}
+          {topRated ? <TopRatedBadge /> : null}
           {listing.is_franchise ? (
             <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">
               Franchise
@@ -90,6 +96,12 @@ export default async function ListingPage({
           </p>
         ) : null}
       </div>
+
+      {topRated && summary ? (
+        <section className="rounded-2xl border border-emerald-300 bg-gradient-to-br from-emerald-50 to-white p-5 ring-1 ring-emerald-200">
+          <ReviewSummaryBox listing={listing} summary={summary} />
+        </section>
+      ) : null}
 
       <div className="grid gap-3 sm:grid-cols-2">
         {listing.phone ? (
