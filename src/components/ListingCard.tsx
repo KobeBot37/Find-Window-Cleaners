@@ -13,7 +13,7 @@ export function ListingCard({
 }: {
   listing: Listing;
   featured?: boolean;
-  /** Free "Top Rated" highlight (5.0★ with 100+ Google reviews). Not the paid Featured tier. */
+  /** Free "Top Rated" highlight (4.9★+ with 100+ verified Google reviews). Not the paid Featured tier. */
   topRated?: boolean;
   summary?: ReviewSummary | null;
 }) {

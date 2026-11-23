@@ -1,6 +1,6 @@
 {
-  "_readme": "Free 'Top Rated' highlight (NOT the paid Featured tier). A shop shows as Top Rated only if its slug is in verified_slugs (Google rating + count checked by hand/scripts on the date noted) AND its CSV rating/review_count still meet min_rating/min_reviews. Add a slug to include_slugs to opt in a near-miss (e.g. 4.9). Summaries are written only from Google review text we actually read; edit freely, but never add quotes or claims that are not in the reviews.",
-  "min_rating": 5.0,
+  "_readme": "Free 'Top Rated' highlight (NOT the paid Featured tier). A shop shows as Top Rated only if its slug is in verified_slugs (Google rating + count checked by hand/scripts on the date noted) AND its CSV rating/review_count still meet min_rating/min_reviews. Add a slug to include_slugs to opt in a near-miss (e.g. a shop just under the thresholds). Summaries are written only from Google review text we actually read; edit freely, but never add quotes or claims that are not in the reviews. Threshold raised to 4.9+ on 2026-11-22 (Dennis approved).",
+  "min_rating": 4.9,
   "min_reviews": 100,
   "verified_slugs": [
     "ace-window-cleaning",
@@ -31,7 +31,18 @@
     "valley-shine-pro",
     "white-dove-windows",
     "window-hero-scottsdale",
-    "window-works-llc"
+    "window-works-llc",
+    "az-power-wash-pros",
+    "az-window-services",
+    "clearpro-window-and-carpet-cleaning",
+    "professional-window-cleaning",
+    "scottsdale-window-cleaning-co",
+    "signature-window-cleaning",
+    "simply-reflections",
+    "sparkle-tech-window-washing",
+    "sunsup-cleaning-services",
+    "united-power-washing",
+    "vivid-services"
   ],
   "near_miss_4_9_slugs": [
     "az-power-wash-pros",
