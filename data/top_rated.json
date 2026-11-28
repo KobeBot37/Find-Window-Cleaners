@@ -42,7 +42,8 @@
     "sparkle-tech-window-washing",
     "sunsup-cleaning-services",
     "united-power-washing",
-    "vivid-services"
+    "vivid-services",
+    "real-clean-exterior"
   ],
   "near_miss_4_9_slugs": [
     "az-power-wash-pros",
@@ -204,6 +205,282 @@
       ],
       "reviews_read": 50,
       "checked": "2026-11-22"
+    },
+    "pink-s-window-services": {
+      "headline": "Reviewers most often mention professional, friendly crews and careful, detailed work.",
+      "bullets": [
+        "Professional, friendly crews (mentioned in 4 of 5 reviews we read)",
+        "Careful, detail-oriented work (mentioned in 2 of 5 reviews we read)",
+        "Many reviewers thank Wyatt by name (3 of 5 reviews)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "saguaro-shine-window-cleaning": {
+      "headline": "Reviewers most often mention professional, friendly crews and on-time, efficient service.",
+      "bullets": [
+        "Professional, friendly crews (mentioned in 5 of 5 reviews we read)",
+        "Show up on time and work efficiently (mentioned in 3 of 5 reviews we read)",
+        "Windows left spotless and streak-free (mentioned in 3 of 5 reviews we read)",
+        "Many reviewers thank Caden by name (5 of 5 reviews)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "service-1st-window-and-pressure-cleaning": {
+      "headline": "Reviewers most often mention being a company they call back and careful, detailed work.",
+      "bullets": [
+        "Many say they will use them again, or already do (mentioned in 4 of 5 reviews we read)",
+        "Careful, detail-oriented work (mentioned in 2 of 5 reviews we read)",
+        "Easy scheduling and good communication (mentioned in 2 of 5 reviews we read)",
+        "Many reviewers thank Nick by name (2 of 5 reviews)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "shine-of-east-valley": {
+      "headline": "Reviewers most often mention spotless, streak-free windows and professional, friendly crews.",
+      "bullets": [
+        "Windows left spotless and streak-free (mentioned in 4 of 5 reviews we read)",
+        "Professional, friendly crews (mentioned in 3 of 5 reviews we read)",
+        "Show up on time and work efficiently (mentioned in 2 of 5 reviews we read)",
+        "Many reviewers thank Wade by name (2 of 5 reviews)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "south-mountain-window-cleaning": {
+      "headline": "Reviewers most often mention professional, friendly crews and on-time, efficient service.",
+      "bullets": [
+        "Professional, friendly crews (mentioned in 4 of 5 reviews we read)",
+        "Show up on time and work efficiently (mentioned in 2 of 5 reviews we read)",
+        "Careful, detail-oriented work (mentioned in 2 of 5 reviews we read)",
+        "Many reviewers thank Jeremiah by name (2 of 5 reviews)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "spotless-window-squad": {
+      "headline": "Reviewers most often mention on-time, efficient service and easy scheduling and communication.",
+      "bullets": [
+        "Show up on time and work efficiently (mentioned in 4 of 5 reviews we read)",
+        "Easy scheduling and good communication (mentioned in 3 of 5 reviews we read)",
+        "Windows left spotless and streak-free (mentioned in 2 of 5 reviews we read)",
+        "Many reviewers thank Daniel by name (5 of 5 reviews)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "squeaky-clean-wash-bros": {
+      "headline": "Reviewers most often mention professional, friendly crews and careful, detailed work.",
+      "bullets": [
+        "Professional, friendly crews (mentioned in 3 of 5 reviews we read)",
+        "Careful, detail-oriented work (mentioned in 2 of 5 reviews we read)",
+        "Many say they will use them again, or already do (mentioned in 2 of 5 reviews we read)",
+        "Solar panel cleaning also praised (mentioned in 2 of 5 reviews we read)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "squeegee-bros-window-cleaning": {
+      "headline": "Reviewers most often mention careful, detailed work and cleaning screens and tracks too.",
+      "bullets": [
+        "Careful, detail-oriented work (mentioned in 4 of 5 reviews we read)",
+        "Screens, tracks and sills cleaned too, not just the glass (mentioned in 2 of 5 reviews we read)",
+        "Many say they will use them again, or already do (mentioned in 2 of 5 reviews we read)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "state-forty-eight-window-cleaning": {
+      "headline": "Reviewers most often mention professional, friendly crews and on-time, efficient service.",
+      "bullets": [
+        "Professional, friendly crews (mentioned in 3 of 5 reviews we read)",
+        "Show up on time and work efficiently (mentioned in 2 of 5 reviews we read)",
+        "Careful, detail-oriented work (mentioned in 2 of 5 reviews we read)",
+        "Many reviewers thank Chris by name (4 of 5 reviews)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "sunbros-cleaning": {
+      "headline": "Reviewers most often mention solar panel cleaning and professional, friendly crews.",
+      "bullets": [
+        "Solar panel cleaning also praised (mentioned in 5 of 5 reviews we read)",
+        "Professional, friendly crews (mentioned in 4 of 5 reviews we read)",
+        "Show up on time and work efficiently (mentioned in 3 of 5 reviews we read)",
+        "Careful, detail-oriented work (mentioned in 3 of 5 reviews we read)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "twenty20-window-cleaning": {
+      "headline": "Reviewers most often mention professional, friendly crews and easy scheduling and communication.",
+      "bullets": [
+        "Professional, friendly crews (mentioned in 3 of 5 reviews we read)",
+        "Easy scheduling and good communication (mentioned in 2 of 5 reviews we read)",
+        "Many say they will use them again, or already do (mentioned in 2 of 5 reviews we read)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "uptown-window-cleaning": {
+      "headline": "Reviewers most often mention on-time, efficient service and professional, friendly crews.",
+      "bullets": [
+        "Show up on time and work efficiently (mentioned in 3 of 5 reviews we read)",
+        "Professional, friendly crews (mentioned in 2 of 5 reviews we read)",
+        "Many say they will use them again, or already do (mentioned in 2 of 5 reviews we read)",
+        "Many reviewers thank Jesse by name (3 of 5 reviews)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "valley-pro-power-wash": {
+      "headline": "Reviewers most often mention careful, detailed work and on-time, efficient service.",
+      "bullets": [
+        "Careful, detail-oriented work (mentioned in 3 of 5 reviews we read)",
+        "Show up on time and work efficiently (mentioned in 2 of 5 reviews we read)",
+        "Pressure and house washing work also praised (mentioned in 2 of 5 reviews we read)",
+        "Many reviewers thank Tom by name (2 of 5 reviews)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "valley-shine-pro": {
+      "headline": "Reviewers most often mention professional, friendly crews and on-time, efficient service.",
+      "bullets": [
+        "Professional, friendly crews (mentioned in 3 of 5 reviews we read)",
+        "Show up on time and work efficiently (mentioned in 2 of 5 reviews we read)",
+        "Careful, detail-oriented work (mentioned in 2 of 5 reviews we read)",
+        "Many reviewers thank Nathan by name (3 of 5 reviews)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "white-dove-windows": {
+      "headline": "Reviewers most often mention spotless, streak-free windows and being a company they call back.",
+      "bullets": [
+        "Windows left spotless and streak-free (mentioned in 3 of 5 reviews we read)",
+        "Many say they will use them again, or already do (mentioned in 3 of 5 reviews we read)",
+        "Professional, friendly crews (mentioned in 2 of 5 reviews we read)",
+        "Show up on time and work efficiently (mentioned in 2 of 5 reviews we read)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "window-hero-scottsdale": {
+      "headline": "Reviewers most often mention professional, friendly crews and being a company they call back.",
+      "bullets": [
+        "Professional, friendly crews (mentioned in 4 of 5 reviews we read)",
+        "Many say they will use them again, or already do (mentioned in 3 of 5 reviews we read)",
+        "Show up on time and work efficiently (mentioned in 2 of 5 reviews we read)",
+        "Many reviewers thank Brian by name (3 of 5 reviews)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "window-works-llc": {
+      "headline": "Reviewers most often mention being a company they call back and on-time, efficient service.",
+      "bullets": [
+        "Many say they will use them again, or already do (mentioned in 4 of 5 reviews we read)",
+        "Show up on time and work efficiently (mentioned in 3 of 5 reviews we read)",
+        "Professional, friendly crews (mentioned in 2 of 5 reviews we read)",
+        "Many reviewers thank Vince by name (3 of 5 reviews)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "az-power-wash-pros": {
+      "headline": "Reviewers most often mention being a company they call back.",
+      "bullets": [
+        "Many say they will use them again, or already do (mentioned in 3 of 5 reviews we read)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "clearpro-window-and-carpet-cleaning": {
+      "headline": "Reviewers most often mention professional, friendly crews and on-time, efficient service.",
+      "bullets": [
+        "Professional, friendly crews (mentioned in 3 of 5 reviews we read)",
+        "Show up on time and work efficiently (mentioned in 2 of 5 reviews we read)",
+        "Careful, detail-oriented work (mentioned in 2 of 5 reviews we read)",
+        "Many reviewers thank Greg by name (2 of 5 reviews)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "professional-window-cleaning": {
+      "headline": "Reviewers most often mention professional, friendly crews and being a company they call back.",
+      "bullets": [
+        "Professional, friendly crews (mentioned in 4 of 5 reviews we read)",
+        "Many say they will use them again, or already do (mentioned in 2 of 5 reviews we read)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "signature-window-cleaning": {
+      "headline": "Reviewers most often mention professional, friendly crews and careful, detailed work.",
+      "bullets": [
+        "Professional, friendly crews (mentioned in 2 of 5 reviews we read)",
+        "Careful, detail-oriented work (mentioned in 2 of 5 reviews we read)",
+        "Many reviewers thank Matt by name (2 of 5 reviews)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "simply-reflections": {
+      "headline": "Reviewers most often mention professional, friendly crews and on-time, efficient service.",
+      "bullets": [
+        "Professional, friendly crews (mentioned in 2 of 5 reviews we read)",
+        "Show up on time and work efficiently (mentioned in 2 of 5 reviews we read)",
+        "Careful, detail-oriented work (mentioned in 2 of 5 reviews we read)",
+        "Many reviewers thank Max by name (5 of 5 reviews)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "sparkle-tech-window-washing": {
+      "headline": "Reviewers most often mention spotless, streak-free windows and professional, friendly crews.",
+      "bullets": [
+        "Windows left spotless and streak-free (mentioned in 4 of 5 reviews we read)",
+        "Professional, friendly crews (mentioned in 2 of 5 reviews we read)",
+        "Screens, tracks and sills cleaned too, not just the glass (mentioned in 2 of 5 reviews we read)",
+        "Many say they will use them again, or already do (mentioned in 2 of 5 reviews we read)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "sunsup-cleaning-services": {
+      "headline": "Reviewers most often mention solar panel cleaning and professional, friendly crews.",
+      "bullets": [
+        "Solar panel cleaning also praised (mentioned in 3 of 5 reviews we read)",
+        "Professional, friendly crews (mentioned in 2 of 5 reviews we read)",
+        "Show up on time and work efficiently (mentioned in 2 of 5 reviews we read)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "united-power-washing": {
+      "headline": "Reviewers most often mention great pressure washing and professional, friendly crews.",
+      "bullets": [
+        "Pressure and house washing work also praised (mentioned in 2 of 5 reviews we read)",
+        "Professional, friendly crews (mentioned in 2 of 5 reviews we read)",
+        "Careful, detail-oriented work (mentioned in 2 of 5 reviews we read)",
+        "Many reviewers thank Mark by name (4 of 5 reviews)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
+    },
+    "real-clean-exterior": {
+      "headline": "Reviewers most often mention easy scheduling and communication and professional, friendly crews.",
+      "bullets": [
+        "Easy scheduling and good communication (mentioned in 3 of 5 reviews we read)",
+        "Professional, friendly crews (mentioned in 2 of 5 reviews we read)",
+        "Show up on time and work efficiently (mentioned in 2 of 5 reviews we read)",
+        "Many reviewers thank Justin by name (5 of 5 reviews)"
+      ],
+      "reviews_read": 5,
+      "checked": "2026-11-28"
     }
   }
 }
